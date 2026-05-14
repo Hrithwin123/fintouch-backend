@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fintouch-backend
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: MONGODB_URI
+        sync: false
